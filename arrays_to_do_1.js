@@ -47,3 +47,15 @@ const insertAtSplice = (arr, pos, val) => {
 }
 
 console.log(insertAtSplice([1,2,3,4,5],3,99))
+
+
+//Given an array, index, and additional value, insert the value into array at given index. You can think of pushFront(arr,val) as equivalent to insertAt(arr,0,val). 
+const insertAt = (arr, idx, val) => {
+    for (let i = arr.length; i>=idx; i--) {
+        arr[i] = arr[i-1]
+    }
+    arr[idx] = val
+    return arr
+}
+console.log(insertAt([100,200,5], 2, 311))
+
