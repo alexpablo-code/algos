@@ -12,6 +12,24 @@ class SinglyLinkedList{
         this.length = 0
     }
 
+    addtoBack(value){
+        let newNode = new Node(value);
+        
+        if(this.head == null){
+            this.head = newNode;
+            return this;
+        }
+
+        //we need to go to the last node
+        let currentNode= this.head
+        while(currentNode.next !== null){
+            currentNode = currentNode.next
+        }
+        currentNode.next = newNode
+
+        return this;
+    }
+
     printAllData(){
         let currentNode = this.head;
         while(currentNode !== null){
@@ -32,4 +50,5 @@ class SinglyLinkedList{
 const firstSsl = new SinglyLinkedList();
 firstSsl.addFront("A").addFront('B');
 console.log(firstSsl);
-firstSsl.printAllData();
+// firstSsl.printAllData();
+firstSsl.addtoBack('eee').printAllData();
