@@ -41,6 +41,13 @@ class SinglyLinkedList{
 
     addFront(value){
         let newNode = new Node(value);
+
+        //if the list is empty
+        if(!this.head){
+            this.head = newNode;
+            return this;
+        }
+
         newNode.next = this.head;
         this.head = newNode;
         return this;
