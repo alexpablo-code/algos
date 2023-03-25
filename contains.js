@@ -8,10 +8,12 @@ class Node {
 class SLL {
     constructor() {
         this.head = null
+        this.length = 0
     }
 
     addFront(value){
         let newNode = new Node(value);
+        this.length++
     
         //if the list is empty
         if(!this.head){
@@ -39,6 +41,10 @@ class SLL {
         return false;
         
     }
+
+    listLength(){
+        return this.length;
+    }
 }
 
 const newSLL = new SLL();
@@ -46,3 +52,4 @@ newSLL.addFront('a').addFront('b').addFront('z');
 console.log(newSLL);
 
 console.log(newSLL.contains('a'));
+console.log(newSLL.listLength())
