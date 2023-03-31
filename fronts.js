@@ -45,6 +45,19 @@ class SinglyLinkedList{
         return this;
     }
 
+    display(){
+        let currentNode = this.head
+        let displayList = []
+        if(!this.head){
+            return null;
+        }
+        while(currentNode){
+            displayList.push(currentNode.data)
+            currentNode = currentNode.next;
+        }
+        return console.log(displayList);
+    }
+
 
 }
 
@@ -54,4 +67,5 @@ console.log(SLL);
 SLL.removeFront();
 console.log(SLL)
 SLL.frontData()
+SLL.display()
 
