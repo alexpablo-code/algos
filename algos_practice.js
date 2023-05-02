@@ -57,6 +57,21 @@ function twoNumberSumHash(array, targetSum) {
     return resultNums;
 }
 
+const sortString = (s, t) => {
+    let sSorted = s.split('').sort();
+    let tSorted = t.split('').sort();
+    for(let i = 0; i < s.length; i++){
+        if(sSorted[i] == tSorted[i]){
+            continue;
+        }else{
+            return false;
+        }
+    }
+    return true
+}
+
+console.log(sortString('something', 'thingsome'));
+
 // console.log(difference([
 //     [11,2,4],
 //     [4,5,6],
